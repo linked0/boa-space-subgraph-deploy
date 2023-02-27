@@ -1,0 +1,18 @@
+type NftOwner @entity {
+  id: ID!
+  items: [String!]!
+}
+
+type NftItem @entity {
+  id: ID!
+  contract: Bytes
+  tokenId: BigInt!
+  owners: [String!]!
+}
+
+type NftOwnerItem @entity {
+  id: ID!
+  ownerId: String!
+  itemId: String!
+  amount: BigInt!
+}
